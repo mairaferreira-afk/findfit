@@ -75,7 +75,7 @@ export const tokens = {
   },
   "fontFamily": {
     "sans": [
-      "DM Sans",
+      "Manrope",
       "sans-serif"
     ],
     "serif": [

@@ -18,7 +18,7 @@ export default function LojasPage() {
   const { data: stores, isLoading, isError, refetch } = useGetNearbyStores();
 
   return (
-    <div className="min-h-[100dvh] bg-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+    <div className="min-h-[100dvh] bg-white" style={{ fontFamily: 'Manrope, sans-serif' }}>
       {/* Header */}
       <header className="flex items-center justify-between px-5 py-4 border-b border-border sticky top-0 bg-white z-10">
         <button

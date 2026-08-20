@@ -196,7 +196,7 @@ export type NavGroup = {
 export const DESIGN_SYSTEM = {
   title: 'FindFit Design System',
   description:
-    'Chic Minimalista — paleta neutra quente, DM Sans, cantos zero. A fotografia de moda é a protagonista; a UI existe para servi-la.',
+    'Chic Minimalista — paleta neutra quente, Manrope, cantos zero. A fotografia de moda é a protagonista; a UI existe para servi-la.',
 } as const;
 
 export const OVERVIEW_ENTRY: PreviewEntry = {

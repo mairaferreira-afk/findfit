@@ -61,7 +61,7 @@ export default function HomePage() {
   const canSearch = !!(textQuery.trim() || imageBase64);
 
   return (
-    <div className="min-h-[100dvh] bg-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+    <div className="min-h-[100dvh] bg-white" style={{ fontFamily: 'Manrope, sans-serif' }}>
       {/* Header */}
       <header className="flex items-center justify-between px-5 py-5 border-b border-border">
         <div className="flex items-center gap-3">
