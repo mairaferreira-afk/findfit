@@ -30,7 +30,7 @@ function PageLoader() {
   return (
     <div
       className="min-h-[100dvh] flex items-center justify-center bg-white"
-      style={{ fontFamily: 'DM Sans, sans-serif' }}
+      style={{ fontFamily: 'Manrope, sans-serif' }}
     >
       <span
         style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.42em', color: '#171614' }}

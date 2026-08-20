@@ -58,7 +58,7 @@ export default function ProdutoPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-[100dvh] bg-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+      <div className="min-h-[100dvh] bg-white" style={{ fontFamily: 'Manrope, sans-serif' }}>
         <div className="w-full bg-muted animate-pulse" style={{ height: 480 }} />
         <div className="px-5 pt-6 space-y-3">
           <div className="h-4 bg-muted animate-pulse w-3/4" />
@@ -71,7 +71,7 @@ export default function ProdutoPage() {
 
   if (isError || !product) {
     return (
-      <div className="min-h-[100dvh] bg-white flex flex-col items-center justify-center px-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+      <div className="min-h-[100dvh] bg-white flex flex-col items-center justify-center px-5" style={{ fontFamily: 'Manrope, sans-serif' }}>
         <p style={{ fontSize: 14, color: '#9A938D' }}>Peça não encontrada</p>
         <Button className="mt-4" variant="outline" onClick={() => refetch()} data-testid="btn-retry">
           Tentar novamente
@@ -84,7 +84,7 @@ export default function ProdutoPage() {
   }
 
   return (
-    <div className="min-h-[100dvh] bg-white pb-28" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+    <div className="min-h-[100dvh] bg-white pb-28" style={{ fontFamily: 'Manrope, sans-serif' }}>
       {/* Image with overlay nav */}
       <div className="relative" style={{ height: 480, background: '#F5F2EF' }}>
         <img

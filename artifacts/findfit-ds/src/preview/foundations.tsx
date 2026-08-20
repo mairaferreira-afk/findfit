@@ -74,7 +74,7 @@ export function OverviewPage() {
             <p className="mt-2 text-[28px] font-medium tracking-[-0.04em]">findfit</p>
             <div className="mt-1.5 h-px w-12 bg-accent" />
             <p className="mt-3 text-[12px] text-muted-foreground">
-              Chic Minimalista — fotografia em protagonismo,<br />DM Sans, paleta neutra quente, cantos zero.
+              Chic Minimalista — fotografia em protagonismo,<br />Manrope, paleta neutra quente, cantos zero.
             </p>
           </div>
           <div className="flex flex-col items-end gap-1">
@@ -99,7 +99,7 @@ export function OverviewPage() {
       <div className="grid gap-4 lg:grid-cols-2">
         <section className="border bg-card p-5 text-card-foreground">
           <h2 className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-            Tipografia — DM Sans
+            Tipografia — Manrope
           </h2>
           <div className="mt-4 space-y-3">
             {TYPE_SCALE.slice(0, 5).map((entry) => (
@@ -222,7 +222,7 @@ export function FontsPage() {
         <h2 className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
           Família tipográfica
         </h2>
-        <p className="mt-4 text-[32px] font-medium tracking-[-0.04em]">DM Sans</p>
+        <p className="mt-4 text-[32px] font-medium tracking-[-0.04em]">Manrope</p>
         <p className="mt-1 text-sm text-muted-foreground">
           Única família em todo o FindFit. Sans-serif moderna, ligeiramente geométrica —
           elegante sem ser fria, funcional sem ser genérica.
