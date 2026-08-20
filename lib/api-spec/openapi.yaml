@@ -1,0 +1,359 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: FindFit API – busca visual de moda por foto ou texto
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+  - name: busca
+  - name: produtos
+  - name: lojas
+  - name: favoritos
+  - name: categorias
+
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /busca:
+    post:
+      operationId: createSearch
+      tags: [busca]
+      summary: Iniciar busca por texto ou imagem
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SearchInput"
+      responses:
+        "201":
+          description: Busca criada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Search"
+
+  /busca/{searchId}/resultados:
+    get:
+      operationId: getSearchResults
+      tags: [busca]
+      summary: Resultados de uma busca com produtos semelhantes
+      parameters:
+        - name: searchId
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        "200":
+          description: Resultados da busca
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SearchResultList"
+
+  /produtos/destaque:
+    get:
+      operationId: getFeaturedProducts
+      tags: [produtos]
+      summary: Peças em destaque e tendências
+      responses:
+        "200":
+          description: Produtos em destaque
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+
+  /produtos/{productId}:
+    get:
+      operationId: getProduct
+      tags: [produtos]
+      summary: Detalhes de um produto com peças similares
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        "200":
+          description: Detalhes do produto
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductDetail"
+        "404":
+          description: Produto não encontrado
+
+  /lojas/proximas:
+    get:
+      operationId: getNearbyStores
+      tags: [lojas]
+      summary: Lojas próximas com opções compatíveis
+      responses:
+        "200":
+          description: Lojas próximas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Store"
+
+  /favoritos:
+    get:
+      operationId: getFavorites
+      tags: [favoritos]
+      summary: Lista de peças favoritas
+      responses:
+        "200":
+          description: Favoritos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Favorite"
+    post:
+      operationId: createFavorite
+      tags: [favoritos]
+      summary: Adicionar peça aos favoritos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FavoriteInput"
+      responses:
+        "201":
+          description: Adicionado
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Favorite"
+
+  /favoritos/{favoriteId}:
+    delete:
+      operationId: deleteFavorite
+      tags: [favoritos]
+      summary: Remover peça dos favoritos
+      parameters:
+        - name: favoriteId
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        "204":
+          description: Removido
+
+  /categorias:
+    get:
+      operationId: getCategories
+      tags: [categorias]
+      summary: Categorias para filtros de busca
+      responses:
+        "200":
+          description: Categorias
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Category"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required: [status]
+
+    SearchInput:
+      type: object
+      properties:
+        queryText:
+          type: ["string", "null"]
+        imageUrl:
+          type: ["string", "null"]
+        lat:
+          type: ["number", "null"]
+        lng:
+          type: ["number", "null"]
+
+    Search:
+      type: object
+      required: [id, createdAt]
+      properties:
+        id:
+          type: number
+        queryText:
+          type: ["string", "null"]
+        imageUrl:
+          type: ["string", "null"]
+        extractedAttributes:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+
+    SearchResultList:
+      type: object
+      required: [total, products, searchId]
+      properties:
+        searchId:
+          type: number
+        total:
+          type: number
+        products:
+          type: array
+          items:
+            $ref: "#/components/schemas/Product"
+
+    Product:
+      type: object
+      required: [id, name, storeName, price, imageUrl]
+      properties:
+        id:
+          type: number
+        name:
+          type: string
+        category:
+          type: ["string", "null"]
+        color:
+          type: ["string", "null"]
+        material:
+          type: ["string", "null"]
+        imageUrl:
+          type: string
+        price:
+          type: number
+        priceFormatted:
+          type: string
+        storeName:
+          type: string
+        storeType:
+          type: ["string", "null"]
+        storeUrl:
+          type: ["string", "null"]
+        similarity:
+          type: ["number", "null"]
+        sponsored:
+          type: boolean
+        badgeLabel:
+          type: ["string", "null"]
+        isFavorited:
+          type: boolean
+
+    ProductDetail:
+      type: object
+      required: [id, name, storeName, price, imageUrl, similar]
+      properties:
+        id:
+          type: number
+        name:
+          type: string
+        category:
+          type: ["string", "null"]
+        color:
+          type: ["string", "null"]
+        material:
+          type: ["string", "null"]
+        composition:
+          type: ["string", "null"]
+        shipping:
+          type: ["string", "null"]
+        imageUrl:
+          type: string
+        price:
+          type: number
+        priceFormatted:
+          type: string
+        storeName:
+          type: string
+        storeCollection:
+          type: ["string", "null"]
+        storeType:
+          type: ["string", "null"]
+        storeUrl:
+          type: ["string", "null"]
+        sponsored:
+          type: boolean
+        isFavorited:
+          type: boolean
+        similar:
+          type: array
+          items:
+            $ref: "#/components/schemas/Product"
+
+    Store:
+      type: object
+      required: [id, name, address, productCount]
+      properties:
+        id:
+          type: number
+        name:
+          type: string
+        type:
+          type: ["string", "null"]
+        url:
+          type: ["string", "null"]
+        address:
+          type: string
+        latitude:
+          type: ["number", "null"]
+        longitude:
+          type: ["number", "null"]
+        distanceKm:
+          type: ["number", "null"]
+        productCount:
+          type: number
+
+    Favorite:
+      type: object
+      required: [id, productId, createdAt]
+      properties:
+        id:
+          type: number
+        productId:
+          type: number
+        product:
+          $ref: "#/components/schemas/Product"
+        createdAt:
+          type: string
+
+    FavoriteInput:
+      type: object
+      required: [productId]
+      properties:
+        productId:
+          type: number
+
+    Category:
+      type: object
+      required: [id, label, value]
+      properties:
+        id:
+          type: number
+        label:
+          type: string
+        value:
+          type: string

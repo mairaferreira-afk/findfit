@@ -1,0 +1,10 @@
+@keyframes fashion-pulse {
+  0%, 100% { transform: scale(1); opacity: .92; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+.fashion-pulse { animation: fashion-pulse 2.4s ease-in-out infinite; }
+@keyframes fashion-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+.fashion-float { animation: fashion-float 3s ease-in-out infinite; }

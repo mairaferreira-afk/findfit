@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "FindFit App"
+description = "FindFit é um app de descoberta de moda para mulheres de 14–25 anos. Permite enviar foto ou descrição de uma peça de roupa vista em redes sociais e encontra produtos visualmente semelhantes com imagem, loja, preço e link para compra. Interface chic minimalista inspirada na linguagem editorial de moda contemporânea."
+version = "1.0.0"
+id = "artifacts/findit-app"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19465
+
+[services.development]
+run = "pnpm --filter @workspace/findit-app run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/findit-app", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/findit-app/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19465"
+BASE_PATH = "/"

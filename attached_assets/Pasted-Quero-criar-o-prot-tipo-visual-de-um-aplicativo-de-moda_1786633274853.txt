@@ -1,0 +1,60 @@
+Quero criar o protótipo visual de um aplicativo de moda que ajuda pessoas a encontrarem roupas iguais ou parecidas com uma referência que viram no Instagram, Pinterest, TikTok, em uma série ou em uma foto.
+O público principal são jovens de 14 a 25 anos, conectados com moda e tendências e acostumados a pesquisar e comprar roupas pelo celular.
+Crie uma experiência mobile-first, simples, intuitiva e muito visual. As fotos das roupas devem ser as protagonistas da interface.
+Quero criar 3 telas principais conectadas entre si:
+Tela 1 — Enviar uma foto
+Esta é a tela inicial do aplicativo.
+Ela deve deixar imediatamente claro que a pessoa pode enviar uma foto de uma roupa para encontrar peças iguais ou parecidas para comprar.
+Inclua:
+* uma frase curta explicando a proposta;
+* uma área grande para fazer upload de uma foto ou print;
+* possibilidade de selecionar uma imagem da galeria;
+* um botão principal como “Encontrar peças parecidas”;
+* poucos elementos na tela, para que a ação principal fique óbvia.
+A pessoa deve entender o que fazer em poucos segundos.
+Tela 2 — Resultados da busca
+Depois que a foto for enviada, mostre os produtos visualmente semelhantes encontrados.
+Inclua:
+* a foto usada como referência em uma área menor;
+* título como “Encontramos peças parecidas”;
+* produtos organizados em uma grade visual;
+* foto da peça;
+* nome curto;
+* loja;
+* preço;
+* opção de filtrar ou ordenar os resultados;
+* possibilidade de salvar/favoritar uma peça.
+A prioridade visual deve ser a imagem das roupas, seguida pelo preço.
+Tela 3 — Detalhe da peça
+Ao selecionar um dos resultados, abra uma página com mais informações.
+Inclua:
+* foto grande da peça;
+* nome;
+* preço em bastante destaque;
+* nome da loja;
+* informações básicas relevantes;
+* botão principal “Ver na loja”;
+* opção de salvar/favoritar;
+* algumas peças semelhantes abaixo, se houver espaço.
+O objetivo final desta tela é levar a pessoa para o site da loja onde poderá comprar a peça.
+Direção visual
+Quero uma estética de plataforma de descoberta de moda contemporânea, mais próxima de um encontro entre Pinterest, editorial de moda digital e e-commerce jovem do que de um aplicativo corporativo ou tecnológico.
+A interface deve:
+* ser clean sem parecer vazia;
+* ter bastante espaço para fotografias;
+* parecer jovem e atual;
+* transmitir moda e descoberta;
+* usar uma tipografia moderna e legível;
+* ter hierarquia visual muito clara;
+* funcionar muito bem no celular;
+* manter consistência de cores, botões, cards, espaçamentos e formas nas três telas.
+Evite:
+* estética genérica de startup de IA;
+* fundo escuro com degradê roxo ou azul;
+* excesso de sombras;
+* elementos 3D;
+* excesso de texto;
+* aparência de aplicativo bancário;
+* interface excessivamente futurista.
+Antes de escolher uma versão definitiva, gere algumas variações visuais da proposta para que possamos comparar estilos sem substituir as anteriores.
+Neste primeiro momento, concentre-se no design e na experiência das três telas, e não em desenvolver toda a funcionalidade do aplicativo.

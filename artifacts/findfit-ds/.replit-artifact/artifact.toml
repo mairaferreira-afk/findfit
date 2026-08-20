@@ -1,0 +1,19 @@
+kind = "design-system"
+previewPath = "/findfit-ds/"
+title = "FindFit Design System"
+description = "Sistema de design oficial do FindFit. Extraído das telas Chic Minimalista — paleta neutra quente (branco, near-black, champagne), DM Sans, cantos zero, fotografias de moda em protagonismo absoluto."
+version = "1.0.0"
+id = "artifacts/findfit-ds"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/findfit-ds/" ]
+localPort = 25792
+
+[services.development]
+run = "pnpm --filter @workspace/findfit-ds run dev"
+
+[services.env]
+PORT = "25792"
+BASE_PATH = "/findfit-ds/"

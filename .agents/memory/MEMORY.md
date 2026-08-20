@@ -1,0 +1,1 @@
+- [FindFit full-stack architecture](findfit-architecture.md) — stack, data model, and key constraints for the FindFit/FindIt app

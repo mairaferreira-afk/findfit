@@ -1,0 +1,128 @@
+Claro — aqui vai um prompt mais refinado para você copiar no Replit:
+
+---
+
+**Prompt para o Replit**
+
+Quero seguir com a **variante C – chic minimalista** como direção oficial do projeto **FindFit**.
+
+Use essa proposta como base e **refine as 3 telas principais**, mantendo a estética atual: elegante, clean, sofisticada, minimalista e muito visual, com foco em moda.
+A interface deve continuar com aparência de **plataforma de descoberta de moda**, sem parecer um app genérico de tecnologia.
+
+### Objetivo do produto
+
+O FindFit é um aplicativo que permite que a pessoa envie uma foto de uma roupa que viu e encontre **peças semelhantes para comprar**.
+
+### Importante sobre a lógica da tela 2
+
+Se a pessoa envia, por exemplo, **um vestido branco longo**, os resultados precisam mostrar **várias opções semelhantes à peça enviada**, vindas de **lojas diferentes** e com **preços diferentes**.
+
+Ou seja, a tela de resultados não deve mostrar peças muito diferentes entre si ou itens aleatórios da mesma categoria.
+Ela deve mostrar **alternativas realmente parecidas com a referência enviada**, para que a usuária consiga comparar:
+
+* modelos semelhantes;
+* lojas diferentes;
+* faixas de preço diferentes;
+* opções mais acessíveis ou mais premium.
+
+### Refinar as 3 telas
+
+#### Tela 1 — Enviar foto
+
+Manter a estrutura atual, mas deixar ainda mais claro o que o app faz.
+
+Incluir:
+
+* nome do app **FindFit**;
+* título principal claro;
+* subtítulo curto explicando a proposta, como:
+  **“Envie uma foto e encontre peças semelhantes para comprar.”**
+* área de upload bem destacada;
+* botão para escolher imagem da galeria;
+* botão principal **“Encontrar peças”**;
+* visual simples, elegante e intuitivo.
+
+#### Tela 2 — Resultados da busca
+
+Refinar esta tela para comunicar melhor que os resultados são **semelhantes à peça enviada**.
+
+Incluir:
+
+* miniatura da imagem de referência enviada;
+* título como **“24 resultados”** ou **“Encontramos peças semelhantes”**;
+* subtítulo explicando que são peças parecidas com a referência;
+* filtros claros e úteis, por exemplo:
+
+  * Todos
+  * Vestidos
+  * Faixa de preço
+  * Mais parecidos
+* opção de ordenar;
+* grade de produtos com:
+
+  * imagem da peça;
+  * nome;
+  * loja;
+  * preço;
+  * botão ou ícone de favorito.
+
+**Muito importante:**
+os itens mostrados devem ser **visualmente próximos da roupa enviada**.
+Se a referência for um vestido branco longo e elegante, os resultados devem seguir esse estilo, mudando principalmente:
+
+* a loja;
+* o preço;
+* pequenos detalhes do corte/modelagem.
+
+Evite mostrar peças muito diferentes, como blazer, saia, camiseta ou roupas com outra proposta.
+
+#### Tela 3 — Detalhe da peça
+
+Manter essa tela sofisticada e clean.
+
+Incluir:
+
+* foto grande da peça;
+* nome da peça;
+* loja;
+* preço com bastante destaque;
+* informações básicas;
+* botão principal **“Ver na loja”** com bastante destaque;
+* seção de peças similares abaixo.
+
+### Direção visual
+
+Manter exatamente a linguagem da **variante C – chic minimalista**:
+
+* elegante;
+* clean;
+* neutra;
+* sofisticada;
+* editorial;
+* foco grande em fotografia;
+* muito espaço em branco;
+* tipografia moderna e refinada;
+* hierarquia visual clara.
+
+### Não fazer
+
+Evite:
+
+* visual genérico de startup;
+* elementos futuristas de IA;
+* excesso de informação;
+* cards poluídos;
+* cores chamativas;
+* resultados aleatórios ou pouco relacionados com a peça enviada.
+
+### Próximo passo
+
+Com base nessa versão refinada, também quero que você:
+
+1. transforme essa proposta em um **design system consistente**;
+2. defina cores, tipografia, botões, cards, espaçamentos e componentes;
+3. gere um **design.md** descrevendo esse padrão visual de forma clara.
+
+---
+
+Se quiser, eu também posso te mandar uma **versão mais curta e direta desse prompt**, caso você ache que o Replit responde melhor com instruções menos longas.

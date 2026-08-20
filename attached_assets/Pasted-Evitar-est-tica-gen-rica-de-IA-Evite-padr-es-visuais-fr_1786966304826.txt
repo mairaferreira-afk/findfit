@@ -1,0 +1,46 @@
+Evitar estética genérica de IA
+Evite padrões visuais frequentemente associados a interfaces geradas automaticamente, como:
+excesso de cards arredondados;
+containers dentro de containers;
+gradientes;
+sombras exageradas;
+botões grandes e excessivamente arredondados;
+ícones decorativos sem função;
+excesso de badges e pills;
+fundos coloridos apenas para preencher espaço;
+layouts excessivamente simétricos;
+seções com aparência de landing page SaaS;
+textos genéricos ou elementos adicionados apenas para deixar a tela “mais completa”.
+A interface deve parecer intencionalmente desenhada por uma marca de moda, não composta a partir de componentes genéricos.
+Tipografia
+Tenha atenção especial às fontes.
+Evite tipografias que tragam imediatamente uma estética de produto de tecnologia ou “design de IA”, especialmente fontes geométricas muito utilizadas em interfaces SaaS.
+Prefira uma combinação tipográfica mais próxima do universo editorial de moda, com:
+títulos elegantes, leves e com boa presença;
+textos funcionais extremamente legíveis;
+uso cuidadoso de caixa alta, tracking e peso tipográfico;
+hierarquia criada principalmente por tamanho, espaçamento e peso, e não por excesso de cores.
+Não utilize fontes excessivamente futuristas, arredondadas ou caricatas.
+Cores
+Utilize uma paleta neutra e sofisticada, priorizando:
+branco;
+preto;
+tons de off-white;
+cinzas quentes ou neutros;
+cores de apoio apenas quando realmente necessárias.
+Evite especialmente a estética comum de produtos de IA, como:
+roxo vibrante;
+azul elétrico;
+gradientes azul/roxo;
+neon;
+muitas cores de destaque competindo entre si.
+A cor deve complementar as fotografias das roupas, nunca competir com elas.
+Regra de decisão
+Sempre que houver uma decisão de interface não especificada no PRD:
+Consulte primeiro o design.md.
+Respeite o Design System existente.
+Escolha a solução mais simples, editorial e coerente com uma plataforma de moda.
+Evite adicionar componentes ou informações sem uma função clara.
+Pergunte: “isso parece uma decisão de uma marca de moda ou um padrão genérico de aplicativo?”
+Se parecer genérico, simplifique.
+O objetivo final é criar uma experiência que transmita curadoria, moda, descoberta e desejo, com uma identidade minimalista reconhecível e consistente, evitando completamente a sensação de um template genérico ou de uma interface “com cara de IA”.
